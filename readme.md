@@ -47,6 +47,7 @@ to 2. Setup**
         database:'movedb'
         
 #### 4. Start and test the service
+- turn on your mySQL server if needed
 
 - open up your terminal and go to the project folder then type in:
 
