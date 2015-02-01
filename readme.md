@@ -29,7 +29,7 @@ to 2. Setup**
 
 
 #### 2. Setup
-- Use the bullzip software to convert the **Versand12EN.mdb** to **Versand12EN.sql**
+- (Optional) Use the bullzip software to convert the **Versand12EN.mdb** to **Versand12EN.sql**
 - Import **Versand12EN.sql** to your local mySQL Database
 - Go to the project folder **SIM_integration** and install the dependencies. In terminal type:
 
