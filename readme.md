@@ -16,7 +16,7 @@ This is a part of the Demonstration for Data Service in SIM Master FH Frankfurt
         http://dev.mysql.com/downloads/
 
 **The following 2 steps are optional because you already have the data in the Example Data folder in the project folder. In short: you can skip 
-to (2)**
+to 2. Setup**
 
 - Get example data from BSCW
 
