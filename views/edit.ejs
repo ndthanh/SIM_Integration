@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Data Service - SOA</title>
+        <script type="text/javascript" src="/../js/jquery-1.10.2.min.js"></script>
+        <link rel="stylesheet" href="/../css/style.css">
+    </head>
+<body>
+<div class="header">
+    <h1 class="header-title">Data Service with REST - a demonstration</h1>
+</div>
+<form method="post" action="" id="the-form">
+    <table><tr><td>
+
+    <table cellpadding="11">
+    <tr><td class="label">Customer ID</td><td> <input type="text" name="CUSTOMER_ID" value="<%=data[0].CUSTOMER_ID%>"></td></tr>
+    <tr><td class="label">Status</td><td> <input type="text" name="STATUS" value="<%=data[0].STATUS%>"></td></tr>
+    <tr><td class="label">FIRSTNAME</td><td> <input type="text" name="FIRSTNAME" value="<%=data[0].FIRSTNAME%>"></td></tr>
+    <tr><td class="label">LASTNAME</td><td> <input type="text" name="LASTNAME" value="<%=data[0].LASTNAME%>"></td></tr>
+    <tr><td class="label">PAYMENT_METHOD</td><td> <input type="text" name="PAYMENT_METHOD" value="<%=data[0].PAYMENT_METHOD%>"></td></tr>
+    <tr>
+        <td class="label"></td>
+        <td>
+            &nbsp; <input type="button" value="Save" onClick="saveUser()">
+                   <input type="button" value="Cancel" onClick="location.href='/api/user'">
+        </td>
+     </tr>
+    </table>
+    </td>
+    <td>
+    <table cellpadding="11">  
+    <tr><td class="label">STREET</td><td> <input type="text" name="STREET" value="<%=data[0].STREET%>"></td></tr>
+    <tr><td class="label">CITY</td><td> <input type="text" name="CITY" value="<%=data[0].CITY%>"></td></tr>
+    <tr><td class="label">SHIRE</td><td> <input type="text" name="SHIRE" value="<%=data[0].SHIRE%>"></td></tr>
+    <tr><td class="label">POSTCODE</td><td> <input type="text" name="POSTCODE" value="<%=data[0].POSTCODE%>"></td></tr>
+    <tr><td class="label">COUNTRY</td><td> <input type="text" name="COUNTRY" value="<%=data[0].COUNTRY%>"></td></tr>
+    <tr><td class="label">LASTORDER</td><td> <input type="text" name="LASTORDER" value="2014-12-01 00:00:00"></td></tr>
+    <tr><td class="label">LAST_ADVERTISINGCAMPAIGN</td><td> <input type="text" name="LAST_ADVERTISINGCAMPAIGN" value="2014-12-01 00:00:00"></td></tr>
+    
+
+     
+    </table>
+  </td></tr></table>
+</form>
+ <script>
+    
+        function saveUser(){
+           
+           $.ajax({
+            
+            url:"/api/user/"+<%=data[0].CUSTOMER_ID%>,
+            type:"put",
+            data:$("#the-form").serialize(),
+            success:function(res){
+                
+                window.location.href = '/api/user';
+                return false;
+            },
+            error:function(xhr, status, error){
+                
+                console.log(xhr.responseText);
+                var err = '';
+                $.each(JSON.parse(xhr.responseText) , function(i, item) {
+                   
+                     err +='<li>'+item.msg+'</li>';
+                });
+                $(".err-area").html(err);    
+                return false;
+            }
+            
+           });
+        }
+    
+    </script>
+</body>
+</html>
