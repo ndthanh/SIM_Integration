@@ -3,21 +3,32 @@ This is a part of the Demonstration for Data Service in SIM Master FH Frankfurt
 # Setup
 #### 1. Install necessary softwares and get example data
 - Get example data from BSCW
+
         https://bscw.fh-frankfurt.de/EduRes/pub/bscw.cgi/d2110963/Versand12EN.mdb
+
 - Download and install the Bullzip software to convert access DB to mySQL
+
         http://www.bullzip.com/products/a2m/info.php
+
 - Clone the project on github (or go to the link and download it)
+
         git clone https://github.com/ndthanh/SIM_Integration
+
 - Install Nodejs
+
         http://nodejs.org/
+
 - Install mySQL
+
         http://dev.mysql.com/downloads/
+        
 
 
 #### 2. Setup
 - Use the bullzip software to convert the **Versand12EN.mdb** to **Versand12EN.sql**
 - Import **Versand12EN.sql** to your local mySQL Database
 - Go to the project folder **SIM_integration** and install the dependencies. In terminal type:
+
         npm install
 
 #### 3. Configuration
@@ -34,9 +45,11 @@ This is a part of the Demonstration for Data Service in SIM Master FH Frankfurt
 #### 4. Start and test the service
 
 - open up your terminal and go to the project folder then type in:
+
         node server.js
 
 - on a browser, go to the address
+
         http://localhost:3000/api/user
 
 #### 5. Operations overview
