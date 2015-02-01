@@ -2,13 +2,6 @@ This is a part of the Demonstration for Data Service in SIM Master FH Frankfurt
 
 # Setup
 #### 1. Install necessary softwares and get example data
-- Get example data from BSCW
-
-        https://bscw.fh-frankfurt.de/EduRes/pub/bscw.cgi/d2110963/Versand12EN.mdb
-
-- Download and install the Bullzip software to convert access DB to mySQL
-
-        http://www.bullzip.com/products/a2m/info.php
 
 - Clone the project on github (or go to the link and download it)
 
@@ -21,7 +14,18 @@ This is a part of the Demonstration for Data Service in SIM Master FH Frankfurt
 - Install mySQL
 
         http://dev.mysql.com/downloads/
-        
+
+**The following 2 steps are optional because you already have the data in the Example Data folder in the project folder. In short: you can skip 
+to (2)**
+
+- Get example data from BSCW
+
+        https://bscw.fh-frankfurt.de/EduRes/pub/bscw.cgi/d2110963/Versand12EN.mdb
+
+- Download and install the Bullzip software to convert access DB to mySQL
+
+        http://www.bullzip.com/products/a2m/info.php
+
 
 
 #### 2. Setup
